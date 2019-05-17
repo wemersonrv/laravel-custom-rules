@@ -22,10 +22,14 @@ Use it with laravel validator rules in the way you most like: Custom Request, `\
 ```php
 $rules = [
     'cpf' => 'required,cpf',
+    'cnpj' => 'required,cnpj',
+    'cellphone' => 'mobile_br',
 ];
 
 $errorMsgs = [
     'cpf' => 'The :attribute must be a valid Brazilian CPF.',
+    'cnpj' => 'The :attribute must be a valid Brazilian CNPJ.',
+    'cellphone' => 'Invalid mobile number.', // The show is yours, do as you want!
 ];
 
 $validator = \Validator::make($request->all(), $rules, $errorMsgs);
@@ -37,13 +41,17 @@ if($validator->fails()){
 ## To-do List
 
 * [x] Brazilian CPF
-* [ ] Brazilian CNPJ
+* [x] Brazilian CNPJ
 * [x] Brazilian mobile phone with 9 digit
 * [ ] Brazilian Zip code (CEP)
 * [ ] Brazilian landline phone
+* [ ] Exists compound (Multi column exists check)
 
 ## Release History
 
+* 0.3.0
+  * Brazilian CNPJ
+  * ADD: Brazilian CNPJ rule (`cnpj`)
 * 0.2.0
   * Brazilian Mobile (with 9 digit check)
   * ADD: Brazilian Mobile rule (`mobile_br`)
