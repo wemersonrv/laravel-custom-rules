@@ -2,7 +2,6 @@
 > Custom validator rules for Laravel 5.5+.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/wemersonrv/laravel-custom-rules.svg?style=flat)](https://packagist.org/packages/wemersonrv/laravel-custom-rules)
-
 [![Total Downloads](https://img.shields.io/packagist/dt/wemersonrv/laravel-custom-rules.svg?style=flat)](https://packagist.org/packages/wemersonrv/laravel-custom-rules)
 
 This package contains custom validator rules for laravel 5.5+, made first for my personal use;
@@ -39,18 +38,21 @@ if($validator->fails()){
 
 * [x] Brazilian CPF
 * [ ] Brazilian CNPJ
-* [ ] Brazilian mobile phone with 9 digit
+* [x] Brazilian mobile phone with 9 digit
 * [ ] Brazilian Zip code (CEP)
 * [ ] Brazilian landline phone
 
 ## Release History
 
+* 0.2.0
+  * Brazilian Mobile (with 9 digit check)
+  * ADD: Brazilian Mobile rule (`mobile_br`)
 * 0.1.1
   * BUGFIX: Just Service provider requires, bu changing namespace
   * CHANGE: From `use Rules\Cpf` to `use Wemersonrv\CustomRules\Rules\Cpf`
 * 0.1.0
   * The first proper release
-    * ADD: Brazilian CPF rule
+  * ADD: Brazilian CPF rule (`cpf`)
 * 0.0.1
   * Work in progress
 
