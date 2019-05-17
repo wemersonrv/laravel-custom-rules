@@ -1,7 +1,6 @@
 {
     "name": "wemersonrv/laravel-custom-rules",
-    "description": "Custom validator rules to laravel 5.4+",
-    "type": "library",
+    "description": "Custom validator rules to laravel 5.5+",
     "authors": [
         {
             "name": "Wemerson Guimaraes",
@@ -14,11 +13,28 @@
         "rules"
     ],
     "license": "GPL-3.0-or-later",
-    "require": {},
+    "require": {
+        "php": ">=7.0.0"
+    },
     "autoload": {
         "psr-4": {
-            "Wemersonrv\\laravel-validators\\": "src/"
+            "Wemersonrv\\CustomRules\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wemersonrv\\CustomRules\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wemersonrv\\CustomRules\\CustomRulesServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
     },
     "minimum-stability": "dev",
     "prefer-stable": true

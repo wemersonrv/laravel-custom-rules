@@ -1,22 +1,22 @@
-# Custom validator rules
+## Custom validator rules
 > Custom validator rules for Laravel 5.4+.
 
-[![Latest Version on Github](https://img.shields.io/github/release/wemersonrv/laravel-custom-rules.svg?style=flat)](https://packagist.org/packages/wemersonrv/laravel-custom-rules)
+[![Latest Version on Github](https://img.shields.io/github/release/wemersonrv/laravel-custom-rules.svg?style=flat)](https://github.com/wemersonrv/laravel-custom-rules)
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/wemersonrv/laravel-custom-rules.svg?style=flat)](https://packagist.org/packages/wemersonrv/laravel-custom-rules)
 
 [![Total Downloads](https://img.shields.io/packagist/dt/wemersonrv/laravel-custom-rules.svg?style=flat)](https://packagist.org/packages/wemersonrv/laravel-custom-rules)
 
 This package contains custom validator rules for laravel 5.4+, made first for my personal use;
-so it's grwoing damn slowly :tired_face:! But if you don't find anything useful, please tell me or make a PR.
+so it's grwoing damn slowly :tired_face:! If you don't find anything useful, please tell me or make a PR.
 
-## Installation
+### Installation
 
 ```sh
 composer require wemersonrv/laravel-custom-rules
 ```
 
-## Usage
+### Usage
 
 TODO
 
@@ -24,25 +24,28 @@ TODO
 // TODO
 ```
 
-## TODO List
+### TODO List
 
-* [ ] Brazilian CPF
+* [x] Brazilian CPF
 * [ ] Brazilian CNPJ
 * [ ] Brazilian mobile phone with 9 digit
 * [ ] Brazilian Zip code (CEP)
 * [ ] Brazilian landline phone
 
-## Release History
+### Release History
 
+* 0.1.0
+  * The first proper release
+  * ADD: Brazilian CPF rule
 * 0.0.1
   * Work in progress
 
-## References
+### References
 
 * Laravel Framework
   * [https://laravel.com/](https://laravel.com/)
 
-## Meta
+### Meta
 
 Wemerson Guimarães – [@WemersonCG](https://twitter.com/WemersonCG) – wemersonrv@gmail.com
 
