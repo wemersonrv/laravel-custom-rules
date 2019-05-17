@@ -1,0 +1,25 @@
+{
+    "name": "wemersonrv/laravel-custom-rules",
+    "description": "Custom validator rules to laravel 5.4+",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Wemerson Guimaraes",
+            "email": "wemersonrv@gmail.com"
+        }
+    ],
+    "keywords": [
+        "laravel",
+        "validator",
+        "rules"
+    ],
+    "license": "GPL-3.0-or-later",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Wemersonrv\\laravel-validators\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
