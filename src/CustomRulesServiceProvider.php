@@ -4,7 +4,7 @@ namespace Wemersonrv\CustomRules;
 
 use Illuminate\Support\ServiceProvider;
 
-use Rules\Cpf;
+use Wemersonrv\CustomRules\Rules\Cpf;
 
 class CustomRulesServiceProvider extends ServiceProvider
 {

@@ -1,30 +1,41 @@
-## Custom validator rules
-> Custom validator rules for Laravel 5.4+.
-
-[![Latest Version on Github](https://img.shields.io/github/release/wemersonrv/laravel-custom-rules.svg?style=flat)](https://github.com/wemersonrv/laravel-custom-rules)
+# Custom validator rules
+> Custom validator rules for Laravel 5.5+.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/wemersonrv/laravel-custom-rules.svg?style=flat)](https://packagist.org/packages/wemersonrv/laravel-custom-rules)
 
 [![Total Downloads](https://img.shields.io/packagist/dt/wemersonrv/laravel-custom-rules.svg?style=flat)](https://packagist.org/packages/wemersonrv/laravel-custom-rules)
 
-This package contains custom validator rules for laravel 5.4+, made first for my personal use;
+This package contains custom validator rules for laravel 5.5+, made first for my personal use;
 so it's grwoing damn slowly :tired_face:! If you don't find anything useful, please tell me or make a PR.
 
-### Installation
+**Important: This project was made thinking in package autodiscover, so it needs at least version 5.5+ of Laravel Framework**
+
+## Installation
 
 ```sh
 composer require wemersonrv/laravel-custom-rules
 ```
 
-### Usage
+## Usage
 
-TODO
+Use it with laravel validator rules in the way you most like: Custom Request, `\Validator` facade, etc.
 
 ```php
-// TODO
+$rules = [
+    'cpf' => 'required,cpf',
+];
+
+$errorMsgs = [
+    'cpf' => 'The :attribute must be a valid Brazilian CPF.',
+];
+
+$validator = \Validator::make($request->all(), $rules, $errorMsgs);
+if($validator->fails()){
+    return response($validator->errors(), 400);
+}
 ```
 
-### TODO List
+## To-do List
 
 * [x] Brazilian CPF
 * [ ] Brazilian CNPJ
@@ -32,20 +43,23 @@ TODO
 * [ ] Brazilian Zip code (CEP)
 * [ ] Brazilian landline phone
 
-### Release History
+## Release History
 
+* 0.1.1
+  * BUGFIX: Just Service provider requires, bu changing namespace
+  * CHANGE: From `use Rules\Cpf` to `use Wemersonrv\CustomRules\Rules\Cpf`
 * 0.1.0
   * The first proper release
-  * ADD: Brazilian CPF rule
+    * ADD: Brazilian CPF rule
 * 0.0.1
   * Work in progress
 
-### References
+## References
 
 * Laravel Framework
   * [https://laravel.com/](https://laravel.com/)
 
-### Meta
+## Meta
 
 Wemerson Guimarães – [@WemersonCG](https://twitter.com/WemersonCG) – wemersonrv@gmail.com
 
