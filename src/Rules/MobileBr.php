@@ -56,6 +56,6 @@ class MobileBr implements Rule
      */
     public function message()
     {
-        return 'The :attribute must be a valid Brazilian CPF.';
+        return 'The :attribute must be a valid Brazilian mobile number.';
     }
 }

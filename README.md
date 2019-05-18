@@ -24,12 +24,14 @@ $rules = [
     'cpf' => 'required,cpf',
     'cnpj' => 'required,cnpj',
     'cellphone' => 'mobile_br',
+    'postal_code' => 'cep',
 ];
 
 $errorMsgs = [
     'cpf' => 'The :attribute must be a valid Brazilian CPF.',
     'cnpj' => 'The :attribute must be a valid Brazilian CNPJ.',
-    'cellphone' => 'Invalid mobile number.', // The show is yours, do as you want!
+    'mobile_br' => 'Invalid mobile number.', // The show is yours, do as you want!
+    'cep' => 'The :attribute must be a valid Brazilian ZIP Code (CEP).',
 ];
 
 $validator = \Validator::make($request->all(), $rules, $errorMsgs);
@@ -42,13 +44,15 @@ if($validator->fails()){
 
 * [x] Brazilian CPF
 * [x] Brazilian CNPJ
-* [x] Brazilian mobile phone with 9 digit
-* [ ] Brazilian Zip code (CEP)
-* [ ] Brazilian landline phone
-* [ ] Exists compound (Multi column exists check)
+* [x] Brazilian Mobile phone with 9 digit
+* [x] Brazilian ZIP code (CEP)
+* [ ] Brazilian Landline phone
 
 ## Release History
 
+* 0.4.0
+  * Brazilian ZIP Code (CEP)
+  * ADD: Brazilian Postal Code (`cep`)
 * 0.3.1
   * Sanitize value before validation
   * CHANGE: Extract only digits (without mask chars) to validate
