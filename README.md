@@ -49,6 +49,9 @@ if($validator->fails()){
 
 ## Release History
 
+* 0.3.1
+  * Sanitize value before validation
+  * CHANGE: Extract only digits (without mask chars) to validate
 * 0.3.0
   * Brazilian CNPJ
   * ADD: Brazilian CNPJ rule (`cnpj`)

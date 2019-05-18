@@ -16,6 +16,9 @@ class Cpf implements Rule
     public function passes($attribute, $value)
     {
         if(!$value) return true;  // Vazio, sem required antes
+
+        $value = preg_replace("/\D+/", "", $value); // Limpa máscara ( se houver )
+
         $digitsPattern = '/\d{11}/'; // Regex Padrão de 11 dígitos numéricos
         $repeatPattern = '/(\d)\1{10}/'; // regex Padrões repetidos: 00000000000 11111111111 etc
 
