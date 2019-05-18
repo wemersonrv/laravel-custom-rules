@@ -24,6 +24,7 @@ $rules = [
     'cpf' => 'required,cpf',
     'cnpj' => 'required,cnpj',
     'cellphone' => 'mobile_br',
+    'landline' => 'landline_br',
     'postal_code' => 'cep',
 ];
 
@@ -31,6 +32,7 @@ $errorMsgs = [
     'cpf' => 'The :attribute must be a valid Brazilian CPF.',
     'cnpj' => 'The :attribute must be a valid Brazilian CNPJ.',
     'mobile_br' => 'Invalid mobile number.', // The show is yours, do as you want!
+    'landline_br' => 'Invalid landline number.',
     'cep' => 'The :attribute must be a valid Brazilian ZIP Code (CEP).',
 ];
 
@@ -46,10 +48,13 @@ if($validator->fails()){
 * [x] Brazilian CNPJ
 * [x] Brazilian Mobile phone with 9 digit
 * [x] Brazilian ZIP code (CEP)
-* [ ] Brazilian Landline phone
+* [x] Brazilian Landline phone
+* [ ] Mac Address
 
 ## Release History
-
+* 0.5.0
+  * Brazilian Landline number
+  * ADD: Brazilian Landline rule (`landline_br`)
 * 0.4.0
   * Brazilian ZIP Code (CEP)
   * ADD: Brazilian Postal Code (`cep`)

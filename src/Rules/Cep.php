@@ -20,7 +20,7 @@ class Cep implements Rule
         $value = preg_replace("/\D+/", "", $value); // Limpa máscara ( se houver )
 
         $digitsPattern = '/\d{8}/'; // Regex Padrão de 8 dígitos numéricos
-        $repeatPattern = '/(\d)\1{7}/'; // regex Padrões repetidos: 00000000000 11111111111 etc
+        $repeatPattern = '/(\d)\1{7}/'; // regex Padrões repetidos: 00000000 11111111 etc
 
 
         if( !preg_match($digitsPattern, $value) // Padrão diferente de 11 digitos numéricos
