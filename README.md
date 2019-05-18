@@ -26,6 +26,7 @@ $rules = [
     'cellphone' => 'mobile_br',
     'landline' => 'landline_br',
     'postal_code' => 'cep',
+    'mac' => 'required|mac_address',
 ];
 
 $errorMsgs = [
@@ -34,6 +35,7 @@ $errorMsgs = [
     'mobile_br' => 'Invalid mobile number.', // The show is yours, do as you want!
     'landline_br' => 'Invalid landline number.',
     'cep' => 'The :attribute must be a valid Brazilian ZIP Code (CEP).',
+    'mac_address' => 'The :attribute must be a valid MAC address',
 ];
 
 $validator = \Validator::make($request->all(), $rules, $errorMsgs);
@@ -41,7 +43,6 @@ if($validator->fails()){
     return response($validator->errors(), 400);
 }
 ```
-
 ## To-do List
 
 * [x] Brazilian CPF
@@ -49,9 +50,14 @@ if($validator->fails()){
 * [x] Brazilian Mobile phone with 9 digit
 * [x] Brazilian ZIP code (CEP)
 * [x] Brazilian Landline phone
-* [ ] Mac Address
+* [ ] Brazilian states (UF)
+* [x] Mac Address
+
 
 ## Release History
+* 0.6.0
+  * Macc Address
+  * ADD: Mac Address rule (`mac_address`)
 * 0.5.0
   * Brazilian Landline number
   * ADD: Brazilian Landline rule (`landline_br`)
