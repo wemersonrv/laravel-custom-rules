@@ -55,6 +55,9 @@ if($validator->fails()){
 
 
 ## Release History
+* 0.6.1
+  * BUGFIX: Fix CPF digits check
+  * CHANGE: Fix digit calculation, force 0 when rest result is 10
 * 0.6.0
   * Macc Address
   * ADD: Mac Address rule (`mac_address`)

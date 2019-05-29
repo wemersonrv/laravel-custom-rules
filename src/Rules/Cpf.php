@@ -35,7 +35,8 @@ class Cpf implements Rule
             for($i=0; $i<strlen($body); $i++){
                 $result += $body[$i] * (10+$pass-$i);
             }
-            $body .= $result % 11 ? 11 - ($result % 11) : 0;
+            $rest = $result % 11 ? 11 - ($result % 11) : 0;
+            $body .= $rest === 10 ? 0 : $rest;
         }
         return $body === $value;
     }
