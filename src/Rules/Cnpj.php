@@ -36,9 +36,11 @@ class Cnpj implements Rule
             for($i=0; $i<strlen($body); $i++){
                 $result += $body[$i] * $range[$i];
             }
-            $body .= $result % 11 ? 11 - ($result % 11) : 0;
+            $rest = $result % 11 ? 11 - ($result % 11) : 0;
+            $body .= $rest === 10 ? 0 : $rest;
             $range = "6{$range}";
         }
+
         return $body === $value;
     }
 
